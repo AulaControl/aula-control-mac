@@ -1,0 +1,31 @@
+name: Ошибка
+description: Что-то работает не так
+labels: ["ошибка"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Модель клавиатуры и подключение
+      placeholder: S75 Pro, кабель USB
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия AulaControl и macOS
+      placeholder: AulaControl 1.0, macOS 15.5
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: Что вы делали, что ожидали и что получилось.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Журнал
+      description: Включите «Показывать пакеты» на странице «Журнал», повторите действие и вставьте журнал сюда.
+      render: text

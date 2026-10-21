@@ -1,0 +1,32 @@
+name: Поддержка новой модели
+description: Моя клавиатура AULA не поддерживается или определяется неправильно
+labels: ["новая модель"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Модель клавиатуры
+      placeholder: например, AULA F99 Max
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Как подключена
+      options: ["Кабель USB", "Донгл 2.4 ГГц", "Bluetooth"]
+    validations:
+      required: true
+  - type: textarea
+    id: devices
+    attributes:
+      label: Журнал приложения
+      description: |
+        Подключите клавиатуру кабелем, откройте в AulaControl страницу «Журнал», нажмите «Копировать» и вставьте сюда.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Что должно работать
+      description: Подсветка, экран, макросы — что для вас важнее всего.
